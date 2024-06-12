@@ -1,0 +1,724 @@
+ /* DISEÑO DEL LOGIN.PHP PRINCIPAL CON SU IMAGEN DE FONDO  Y TODOS LOS DISEÑOS DE SU CONTENEDORES!*/
+
+
+
+    /* Estilo adicional para separar los campos */
+    .form {
+    margin-top: 20px; /* Espacio entre el encabezado y el formulario */
+    }
+    
+    .inputBox {
+    margin-bottom: 20px; /* Aumentar el espacio entre los campos */
+    }
+    /* Añadir espacio entre contraseña e iniciar sesión */
+    input[type="submit"] {
+    margin-top: 20px;
+    }
+    
+    /* Estilo para el mensaje de error */
+    .error-message {
+    color: #ff0000; /* Color rojo */
+    font-size: 16px;
+    margin-top: 5px; /* Espacio superior */
+    font-weight: bold; /* Negrita */
+    }
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #fff;;
+}
+
+
+section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+section span {
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: #181818;
+    z-index: 2;
+    transition: 1.5s;
+}
+
+section span:hover {
+    background: #8bc34a;
+    transition: 0s;
+}
+
+.signin {
+    position: absolute;
+    width: 400px;
+    background: rgba(34, 34, 34, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 4px;
+    border: 2px solid rgba(139, 195, 74, 0.5);
+}
+
+.signin::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid rgba(139, 195, 74, 0.5);
+    border-radius: 4px;
+    animation: glow 2s linear infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(139, 195, 74, 0.9), 0 0 10px rgba(139, 195, 74, 0.9);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(139, 195, 74, 0.9), 0 0 30px rgba(139, 195, 74, 0.9);
+    }
+}
+
+section .signin .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section .signin .content h2 {
+    font-size: 2em;
+    color: #8bc34a;
+    text-transform: none;
+}
+
+section .signin .content .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section .signin .content .form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+section .signin .content .form .inputBox input {
+    position: relative;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .signin .content .form .inputBox i {
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: #fff;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+
+
+.signin .content .form .links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signin .content .form .links a {
+    color: #8bc34a;
+    text-decoration: none;
+}
+
+.signin .content .form .links a:nth-child(2) {
+    color: #8bc34a;
+    font-weight: 600;
+}
+
+.signin .content .form .inputBox input[type="submit"] {
+    padding: 10px;
+    background: #8bc34a;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.35em;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+    section span {
+        width: calc(10vw - 2px);
+        height: calc(10vw - 2px);
+    }
+}
+
+@media (max-width: 600px) {
+    section span {
+        width: calc(20vw - 2px);
+        height: calc(20vw - 2px);
+    }
+}
+ /* FIN DEL  DISEÑO DEL LOGIN PRINCIPAL CON SU IMAGEN DE FONDO  Y TODOS LOS DISEÑOS DE SU CONTENEDORES!*/
+
+
+
+
+/* DISEÑO DE RECUPERARCONTRASEÑA.PHP !*/
+
+        /* Estilo para el casillero de entrada */
+        
+        .inputBox3 {
+            position: relative;
+            margin-bottom: 10px; /* Ajuste de margen inferior */
+        }
+        
+        /* Estilo para el input */
+        .form {
+            max-width: 400px; /* Ancho máximo del formulario */
+            margin: auto; /* Centrar el formulario horizontalmente */
+            padding: 20px;
+        }
+        .inputBox3 input {
+            position: relative;
+            width: 100%;
+            background: #333;
+            border: none;
+            outline: none;
+            padding: 25px 10px 7.5px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1em;
+        }
+        .inputBox3 i {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            padding: 15px 10px;
+            font-style: normal;
+            color: #fff;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .inputBox input:focus + i,
+.inputBox input:valid + i {
+    transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: #fff;
+}
+        /* Estilo para el botón de enviar */
+        input[type="submit"] {
+            padding: 10px;
+            background: #0f0;
+            color: #000;
+            font-weight: 600;
+            font-size: 1.35em;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            width: 100%; /* Ancho completo */
+        }
+        input[type="submit"]:active {
+            opacity: 0.6;
+        }
+        /* Estilo para el enlace de regresar */
+        .back-link {
+            color: #8bc34a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            display: block; /* Convertir en bloque para ocupar el ancho completo */
+            margin-top: 20px; /* Espacio superior */
+            text-align: center; /* Alinear al centro */
+        }
+        /* Estilo para centrar el texto */
+        h2 {
+            text-align: center;
+            margin-bottom: 20px; /* Ajuste de margen inferior */
+        }
+
+
+
+/* FIN DISEÑO DE RECUPERAR CONTRASEÑA!*/
+
+
+/* INICIO DISEÑO DE REGISTRO.PHP  */
+
+/* Resto de estilos para el formulario de registro */
+.inputBox {
+    position: relative;
+    margin-bottom: 10px; /* Ajuste de margen inferior */
+}
+
+.date-input {
+    position: relative;
+    width: calc(100% - 2px);
+    padding: 10px;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+        .date-label {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: left;
+            width: 100%;
+        }
+        .date-input select {
+            width: calc(33.3% - 5px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #333;
+            color: #fff;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+        .select-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            align-items: center;
+        }
+        .form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+        select[name="mes"] {
+            width: calc(50% - 5px);
+        }
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1;
+        }
+        .password-toggle img {
+            width: 20px;
+            height: auto;
+        }
+        .back-link {
+            color: #8bc34a;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: none;
+        }
+        .mensaje-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(34, 34, 34, 0.8);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 20px;
+            border: 1px solid rgba(0, 128, 0, 0.9); /* Borde verde */
+            border-radius: 3px;
+            box-shadow: 0 0 5px rgba(0, 128, 0, 0.9), 0 0 10px rgba(0, 128, 0, 0.9); /* Efecto de brillo */
+            z-index: 1001;
+            display: none; /* Inicialmente oculto */
+        }
+
+
+
+
+
+.white-text {
+    color: #fff; /* Color blanco para el texto */
+    
+}
+
+.select-white {
+    color: #fff; /* Color del texto en el select */
+    background-color: #333; /* Fondo blanco para el select */
+}
+
+/* Resto de estilos para el formulario de registro */
+
+
+/* FIN DISEÑO DE REGISTRO.PHP  */
+
+
+
+/* CSS de pagina.php integrado a style.css */
+/* Aquí pega el CSS de pagina.php sin cambios */
+
+/* INICIO  DISEÑO DE PAGINA.PHP*/
+
+.menu {
+    background-color: rgba(34, 34, 34, 0.8); /* Negro con transparencia */
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    overflow-y: auto;
+    z-index: 1;
+}
+.menu::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('../imagenes/buenas3.jpg');
+background-size: cover;
+opacity: 0.4;
+z-index: -1;
+filter: blur(5px);
+background-attachment: fixed; /* Mantener la imagen de fondo fija */
+}
+
+
+
+.dairysoft-box {
+    background-color: rgba(34, 34, 34, 0.8); /* Negro con transparencia */
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 250px; /* Mismo margen izquierdo que el menú */
+    width: calc(100% - 250px); /* Mismo ancho que el menú */
+    display: flex;
+    z-index: 2; /* Asegúrate de que esté encima del menú */
+    
+}
+
+.dairysoft-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imagenes/buenas3.jpg');
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+    filter: blur(5px);
+    background-attachment: fixed; /* Mantener la imagen de fondo fija */
+}
+
+.logout-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 35px;
+    background-color: #f44336;
+    border-radius: 10px;
+    margin-right: 8%; /* Ajusta este valor para mover más o menos hacia la izquierda */
+    margin-left: auto;
+}
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+.profile2 {
+    display: flex; /* Utiliza un contenedor flexible */
+    align-items: center; /* Alinea los elementos verticalmente */
+    position: relative; /* Necesario para posicionar la barra correctamente */
+}
+
+.profile2 img {
+    width: 40px; /* Tamaño deseado */
+    height: 23px; /* Tamaño deseado */
+    margin-left: auto; /* Alinear la imagen hacia la derecha */
+    border-radius: 5px;
+}
+
+.user-name {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    margin-right: 2%; /* Espacio a la derecha del nombre */
+    margin-left: -6%; /* Espacio a la izquierda del nombre */
+    user-select: none;
+}
+
+/* Estilo para los iconos */
+.icon-button2 {
+    color: #fff; /* Color blanco para los íconos */
+    font-size: 20px; /* Tamaño de fuente para los íconos */
+    margin-right: 77%; /* Espacio a la derecha */
+    display: inline-block; /* Alinea los elementos en línea */
+}
+
+/* Estilo específico para el icono de ocultar */
+.icon-button2 {
+    margin-left: 0%; /* Espacio a la izquierda */
+}
+
+
+
+/* Estilo para los iconos */
+.icon-button {
+    color: #fff; /* Color blanco para los íconos */
+    font-size: 20px; /* Tamaño de fuente para los íconos */
+    margin-right: 2.0%; /* Espacio a la derecha */
+    display: inline-block; /* Alinea los elementos en línea */
+    
+}
+
+/* Estilo específico para el icono de la campana */
+.icon-button:first-child {
+    margin-left: 80%; /* Espacio a la izquierda solo para el primer botón */
+}
+
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative; /* Posición relativa para el contenedor */
+    user-select: none;
+}
+.profile:hover {
+    background-color: transparent; /* Establece el fondo en transparente al hacer hover */
+}
+.profile .profile-title {
+    position: absolute; /* Posición absoluta para el título */
+    top: 10px; /* Ajustar la posición verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    background-color: rgba(139, 195, 74, 0.7);
+    color: white;
+    padding: 5px 10px; /* Ajustar el relleno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: 77px; /* Mover la imagen hacia abajo */
+}
+.profile:hover {
+    background-color: inherit; /* Utiliza el fondo heredado al hacer hover */
+}
+.sections {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px; /* Mover hacia la izquierda */
+    margin-top: 50px; /* Bajar hacia abajo */
+    text-align: left;
+    user-select: none;
+}
+.sections li {
+    margin-bottom: 5px;
+}
+.sections li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: border-color 0.3s; /* Agregar transición para suavizar el cambio */
+    position: relative; /* Para posicionar el pseudo-elemento */
+}
+
+
+
+.sections li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    position: relative; /* Para posicionar el pseudo-elemento */
+}
+
+
+.sections li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: border 0.3s, padding 0.3s; /* Agregar transición para suavizar el cambio */
+    position: relative; /* Para posicionar el pseudo-elemento */
+}
+.sections li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent; /* Borde transparente inicial */
+    transition: border-color 0.3s; /* Transición para el cambio de color del borde */
+    z-index: -1; /* Colocamos detrás del enlace */
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.3); /* Efecto de oscurecimiento inicial */
+}
+.sections li a:hover::before {
+    border-color: #8bc34a; /* Cambiamos el color del borde al pasar el puntero */
+    box-shadow: inset 0 0 50px #8bc34a; /* Efecto de aura alrededor del borde */
+}
+.sections li a:hover {
+    padding-right: 10px; /* Ajusta el valor para mover el borde hacia la izquierda */
+}
+.sections li a {
+    text-align: justify; /* Justificar el texto */
+    padding-left: 50px; /* Agregar relleno a la izquierda */
+}
+.sections .copyright {
+    text-align: center; /* Centrar el texto horizontalmente */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 20px; /* Alinear al borde inferior */
+    left: 1; /* Alinear al borde izquierdo */
+    width: 100%; /* Ocupar todo el ancho del menú */
+    color: #fff; /* Color del texto */
+    user-select: none;
+}
+
+.sections .copyright2 {
+    text-align: center; /* Centrar el texto horizontalmente */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: -20px; /* Alinear al borde inferior */
+    left: 0; /* Alinear al borde izquierdo */
+    width: 100%; /* Ocupar todo el ancho del menú */
+    color: #fff; /* Color del texto */
+    user-select: none;
+}
+
+.iframe-container {
+    position: fixed;
+    top: 40px; /* Cambia esto según la cantidad de espacio que desees */
+    left: 250px; /* Mismo valor que el margen izquierdo del menú */
+    width: calc(100vw - 250px);
+    height: calc(100vh - 40px); /* La altura ahora toma en cuenta el espacio adicional */
+    z-index: 1; /* Asegura que esté por encima de los cuadros */
+}
+
+iframe {
+    width: 100%;
+    height: 100%; /* Ahora se ajustará automáticamente con el tamaño de la ventana gráfica */
+    border: none;
+}
+
+.hello-box,
+.dairysoft-box {
+    z-index: 0; /* Asegura que los cuadros estén detrás del iframe */
+}
+.extra-space {
+    height: 230px; /* Altura del espacio adicional */
+}
+.extra-space2 {
+    height: 320px; /* Altura del espacio adicional */
+}
+
+ /* DISEÑO DEL REGISTRO_EXITOSO.PHP !*/
+
+ h1 {
+    color: #ffff;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ffff;
+    margin-bottom: 40px;
+}
+.message-box {
+background-color: rgba(34, 34, 34, 0.8); /* Cambiado a una opacidad del 80% */
+padding: 20px;
+border: 2px solid rgba(139, 195, 74, 0.5);
+border-radius: 5px; /* Agregado borde redondeado */
+max-width: 600px;
+margin: auto;
+border: 2px solid rgba(139, 195, 74, 0.9); /* Cambiado el valor de opacidad a 0.9 */
+box-shadow: 0 0 10px rgba(139, 195, 74, 0.9), 0 0 10px rgba(139, 195, 74, 0.9); /* Efecto de brillo */
+}
+
+
+.regresar-btn {
+    background-color: #4CAF50;
+    color: black;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.regresar-btn:hover {
+    background-color: #45a049;
+}
+
+ /* FIN DISEÑO DEL REGISTRO_EXITOSO.PHP !*/
+
+/* INICIO DISEÑO DEL LOGOUT.PHP !*/
+.salidamensaje{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.gracias{
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+
+.regresar-btn {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 15px 30px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto del botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima del botón */
+    border-radius: 8px; /* Borde redondeado */
+    text-decoration: none; /* Sin decoración de texto */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.regresar-btn:hover {
+    background-color: #45a049; /* Color de fondo del botón al pasar el mouse */
+}
+
+
+
+/* FIN DISEÑO DEL LOGOUT.PHP !*/
